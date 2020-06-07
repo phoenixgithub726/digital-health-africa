@@ -11,6 +11,9 @@ const Consultant = (props) => {
       {props.patientsData && props.patientsData.length && props.selectedNav === 'PATIENTS' && props.match.params.id &&
         <Patients consultantId={props.match.params.id} pDatas={props.patientsData} />
       }
+      {props.patientsData && props.patientsData.length && props.selectedNav === 'PATIENTS' && props.match.params.id &&
+        <Patients consultantId={props.match.params.id} pDatas={props.patientsData} />
+      }
       {props.patientsData && props.patientsData.length && props.selectedNav === 'FORUM' && props.match.params.id &&
         <Forum consultantId={props.match.params.id} />
       }

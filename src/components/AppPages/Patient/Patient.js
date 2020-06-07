@@ -1,13 +1,18 @@
 import React from 'react'
 import Consultants from './Consultants'
 import HealthTool from './HealthTool'
+import PatientRecords from './PatientRecords/index'
 import Forum from './Forum'
 import { connect } from "react-redux";
 import {getSelectedNav, getPatientData} from "../../../redux/selecters/PatientData";
 
 const Patient = (props) => {
     return(
+        // Get click value from left side bar.
         <>
+            {props.consultantsData && props.consultantsData.length && props.selectedNav === 'RECORDS' && 
+                <PatientRecords patientId={props.match.params.id} cDatas={props.consultantsData}/>
+            }
             {props.consultantsData && props.consultantsData.length && props.selectedNav === 'CONSULTANTS' && 
                 <Consultants patientId={props.match.params.id} cDatas={props.consultantsData}/>
             }

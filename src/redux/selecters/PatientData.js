@@ -4,6 +4,7 @@ export const getSelectedNav = (store) => {
 }
 
 export const getPatientData = (store) => {
+    console.log("getPatientData in selector")
     console.log(store.PatientDashboardReducer.patientData)
     return store.PatientDashboardReducer.patientData
 }

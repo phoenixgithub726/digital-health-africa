@@ -13,6 +13,7 @@ export default (state = DEFAULT_STATE, action) => {
         case PATIENT_SELECTED_NAV:
             return { ...state, patientSelectedNav: action.selectedNav };
         case PATIENT_DATA:
+            console.log("patient data")
             return { ...state, patientData: action.patientData };
         default:
             return state;
