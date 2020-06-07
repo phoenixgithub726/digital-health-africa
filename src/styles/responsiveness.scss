@@ -1,0 +1,27 @@
+@mixin mq-desktop($orientation: '') {
+  @if $orientation=='' {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: 1025px) and (orientation: $orientation) {
+      @content;
+    }
+  }
+}
+
+@mixin mq($max-width, $orientation: '') {
+  @if $orientation=='' {
+    @media (max-width: $max-width) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-width: $max-width) and (orientation: $orientation) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../styles/responsiveness";
+
+.categories-wrapper {
+  position: relative;
+  z-index: 999;
+
+  @include mq(1024px) {
+    margin-top: 65px;
+  }
+
+  .categories-heading {
+    display: flex;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 5px auto;
+    font-size: 24px;
+    font-weight: 700;
+    justify-content: center;
+    padding: 28px 0;
+  }
+
+  .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 65px;
+    }
+  }
+}

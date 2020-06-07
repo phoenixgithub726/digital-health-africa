@@ -1,0 +1,82 @@
+@import "../../styles/responsiveness";
+
+.dailytip-card {
+  width: 21%;
+  font-weight: 400;
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  @include mq(838px) {
+    width: 31%;
+  }
+
+  @include mq(568px) {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .dailytip-imageoverlay {
+    position: relative;
+    overflow: hidden;
+    margin-top: -1.25rem;
+    margin-right: 4%;
+    margin-left: 4%;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    img {
+      width: 100%;
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+  .dailytip-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+
+    .dailytip-tag {
+      margin-top: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.25;
+      color: #3db6d3;
+
+      @include mq(568px) {
+        font-size: 11px;
+      }
+    }
+
+    .dailytip-title {
+      margin-top: 5px;
+
+      h6 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+
+        @include mq(568px) {
+          font-size: 14px;
+        }
+      }
+    }
+    .dailytip-doc {
+      margin-top: 10px;
+      color: #414146;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../styles/responsiveness";
+
+.forum-wrapper {
+  padding: 110px 0 75px;
+  position: relative;
+  z-index: 999;
+
+  @include mq(568px) {
+    padding: 40px 0;
+  }
+
+  .forum-heading,
+  .forum-subheading {
+    display: flex;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  .forum-heading {
+    font-size: 24px;
+    font-weight: 700;
+
+    @include mq(568px) {
+      font-size: 16px;
+    }
+  }
+
+  .forum-subheading {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #414146;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-size-adjust: 100%;
+
+    @include mq(568px) {
+      font-size: 14px;
+      margin: 0 auto;
+      color: #747373;
+    }
+  }
+
+  .forum-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    .forum-buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin: 1.5rem 0;
+      width: 100%;
+
+      @include mq(838px) {
+        position: relative;
+        display: flex;
+        width: 50%;
+        margin: 10px 0 0 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      button {
+        padding: 15px 30px;
+        color: #747373;
+        background-color: transparent;
+        border: 3px solid #ebebeb;
+        margin: 0.375rem;
+        word-wrap: break-word;
+        white-space: normal;
+        cursor: pointer;
+        border-radius: 0.125rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s cubic-bezier(0.42, 0, 0.62, 0.85),
+          box-shadow 0.15s ease-in-out;
+        padding: 0.84rem 2.14rem;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: 700;
+
+        @include mq(838px) {
+          height: 100%;
+          width: 100%;
+        }
+
+        @include mq(568px) {
+          display: block;
+          width: 200%;
+          margin: 0 0 10px 0;
+        }
+      }
+
+      button:last-child {
+        margin-right: 0;
+      }
+
+      button:hover {
+        background-color: #14bef0;
+        color: #fff;
+        border: 3px solid #14bef0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+          0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.main-footer {
+    background: $footer-color;
+    color: $pure-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // z-index: 1;
+    padding: 0 16px;
+}

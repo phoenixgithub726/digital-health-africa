@@ -1,0 +1,124 @@
+@import "../../../styles/variables";
+.container {
+    background-color: #EDF2F7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: #ffffff;
+    width: 330px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    
+    .card-header {
+        background-color: #EEEEEE;
+        height: 6rem;
+        padding: 1rem;
+        color: $active-link;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        
+    }
+    .card-body {
+        padding: 0.2rem 2rem 0.2rem 2rem;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin: 0;
+            cursor: pointer;
+            color: $active-link;
+            font-weight: 700;
+        }
+    }
+    .card-footer {
+        padding: 0.2rem 1rem;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+
+        button{
+            background-color: #FBC02D;
+            margin-bottom: 5px;
+        }
+        button:hover{
+            background-color: #F6602D;
+        }
+        div{
+            a{
+                width: 45%;
+                float: left;
+                justify-items: center;
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                button{
+                    background-color: #0084B4;
+                }
+            }
+            a:nth-child(even){
+                float: right;
+                button{
+                    background-color: #E91E63;
+                }
+            }
+            a > button:hover{
+                background-color: #0044B4;
+            }
+        }
+        .login-buttons{   
+            width: 100%;
+            div{
+                width: 22.5%;
+                float: left;
+                justify-items: center;
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                align-items: center;
+                font-size: 12px;
+            }
+            div:first-child{
+                background-color: #0084B4;
+            }
+            div:nth-child(even){
+                background-color: #999999;
+            }  
+            div:last-child{
+                background-color:#E91E63;                
+            }          
+            div:hover{
+                background-color: #0044B4;
+            }
+        }
+        p{
+            margin: -0.4rem 0rem 0.4rem 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }    
+}
+.login-icon {
+    font-size: 50px;
+}
+
+@media only screen and (min-width: 46.875em){
+    .container {
+        height: 70vh;
+    }    
+}

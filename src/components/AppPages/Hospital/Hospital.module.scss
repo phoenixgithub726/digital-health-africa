@@ -1,0 +1,53 @@
+@import '../../../styles/variables.scss';
+
+.content {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-hospital {
+    background-color: $pure-white;
+    height: 120px;
+    border-radius: 3px;
+    flex: 0.5 400px;
+    margin: 20px;
+    color: $gray-600;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+
+    .title {
+        background: #009da7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        color: $pure-white;
+        font-weight: 500;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 10px;
+        width: 100%;
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 46.875em){
+    .card-hospital {
+        flex-direction: row;
+
+        .title {
+            padding: 10px 50px 0 20px;
+        }
+        .card-body {
+            padding-left: 20px;
+        }
+    }
+  }

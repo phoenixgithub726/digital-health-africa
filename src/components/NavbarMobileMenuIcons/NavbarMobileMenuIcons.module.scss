@@ -1,0 +1,202 @@
+@import "../../styles/responsiveness";
+
+.burger-main {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  height: 56px;
+  color: #000;
+  z-index: 1000;
+
+  @include mq-desktop {
+    position: unset;
+    height: unset;
+    padding: unset;
+  }
+}
+
+.burger-main::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.25);
+  background: #fff;
+
+  @include mq-desktop {
+    display: none;
+    height: unset;
+  }
+}
+
+.burger-container {
+  display: inline-block;
+  width: 33px;
+
+  @include mq-desktop {
+    display: none;
+  }
+}
+
+.burger-sub-container {
+  display: flex;
+}
+
+.burger-icon-link {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
+
+.burger-icon-link + a {
+  img {
+    display: inline-block;
+    position: relative;
+    width: 156px;
+    height: 50px;
+    margin-left: 10px;
+  }
+}
+
+.burger-usercontainer {
+  position: fixed;
+  right: 56px;
+  top: 4px;
+  display: inline-block;
+  z-index: 1000;
+  width: 30px;
+  height: 48px;
+  line-height: 48px;
+  cursor: pointer;
+  color: #414146;
+
+  .burger-usericon {
+    position: absolute;
+    line-height: 6px;
+    text-align: center;
+    left: 23%;
+    margin-left: -3px;
+    transition: 0.3s all ease;
+    top: 30%;
+    margin-top: -3px;
+    font-size: 25px;
+  }
+}
+
+.white-burger-icon-color {
+  background-color: black !important;
+}
+
+.active-slide-panel {
+  margin-left: 20px;
+  margin-top: 19px;
+}
+
+.burger-span-element {
+  width: 24px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  margin: auto;
+  transition: 0.3s all ease;
+}
+
+.burger-span-element::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  transition: 0.3s all ease;
+  width: 24px;
+  height: 4px;
+  background-color: #000;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.burger-span-element::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  transition: 0.3s all ease;
+  width: 24px;
+  height: 4px;
+  background-color: #000;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.ellipsis-container {
+  position: fixed;
+  right: 4px;
+  top: 4px;
+  display: inline-block;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  cursor: pointer;
+  color: #001515;
+}
+
+.ellipsis-icon-element {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  line-height: 6px;
+  text-align: center;
+  background: #001515;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+  top: 50%;
+  margin-top: -3px;
+}
+
+.ellipsis-icon-element::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  line-height: 6px;
+  text-align: center;
+  background: #001515;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+  bottom: 100%;
+  margin-bottom: 3px;
+}
+
+.ellipsis-icon-element::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  line-height: 6px;
+  text-align: center;
+  background: #001515;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+  top: 100%;
+  margin-top: 3px;
+}

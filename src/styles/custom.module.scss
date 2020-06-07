@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+
+// Input
+.form-input {
+    border-radius: 0.2rem;
+    border: solid 1px #E2E8F0;
+    background: $pure-white;
+    padding: 0.7rem 0.5rem;
+    color: #718096;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+input:focus, select:focus {
+    background: #EDF2F7;
+    border: solid 1px #CBD5E0;
+    outline: none;    
+}
+::placeholder {
+    color: #718096;
+    font-size: 12px;
+}
+
+.button {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+    background: #F67A6E;
+    border: none;
+    color: #ffffff;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.button:focus {
+    outline: none;
+}
+.button:hover {
+    background-color: $active-link;
+    transition: all 1s;
+}
+
+
+
+.hospital {
+    background: #009da7;
+}
+
+
+
+       
+
+
+

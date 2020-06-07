@@ -1,0 +1,57 @@
+.whychoose-wrapper {
+  padding-bottom: 130px;
+  padding: 100px 0 105px;
+
+  .whychoose-container {
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    .whychoose-header {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 0;
+      color: #1D429B;
+    }
+
+    .whychoose-subtext {
+      font-size: 20px;
+      margin-top: 28px;
+      color: #696E7B;
+    }
+
+    .whychoose-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+
+      .whychoose-body {
+        margin-top: 75px;
+        flex: 0 0 30.33333%;
+        max-width: 30.33333%;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .whychoose-title {
+          margin-top: 36px;
+          font-weight: 400;
+          font-size: 28px;
+          color: #1D429B;
+        }
+
+        .whychoose-text {
+          margin-top: 18px;
+          font-size: 20px;
+          color: #696E7B;
+        }
+      }
+    }
+  }
+}

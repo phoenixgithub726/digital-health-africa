@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+
+
+
+.sidenav {
+    background: $primary-sidenav;
+    color: $pure-white;
+    height: 100%;
+    margin: 50px 10px 0 0;
+    width: 200px;
+    box-sizing: border-box;
+    
+
+    ul{
+        list-style: none;
+        margin: 20px 10px 0 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none; 
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: $sidenav-text;
+                padding: 10px 10px 10px 10px;
+                outline: none;
+                display: block;
+                font-size: 14px;
+                
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+        li:hover {
+            background: $links-active;
+            border-radius: 3px;
+
+            a {
+                color: $pure-white;
+            }
+        }
+    }
+    ul::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+}
+.sidenav {
+    grid-area: aside;
+    display: none;
+    ul{
+        padding: 0.5rem 0.5rem;
+        margin: 0rem;
+        li{
+            justify-content: start;
+            align-items: center;
+            display: flex;
+            padding: 0.5rem;
+        }
+        li:active{
+            background-color: black;
+        }
+    }
+    
+}
+.sidenav-icon {
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 46.875em){
+    .sidenav {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+    }
+}

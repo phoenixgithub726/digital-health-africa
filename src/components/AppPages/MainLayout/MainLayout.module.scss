@@ -1,0 +1,35 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+    height: 100vh;
+}
+
+.main {
+    grid-area: main;
+    padding: 10px 10px 10px 10px;
+    overflow-y: scroll !important;
+}
+
+@media only screen and (min-width: 46.875em){
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "nav"
+        "aside main"
+        "aside footer";
+        height: 100vh;
+
+        footer{
+            margin-left: 190px;
+        }
+    }
+    .main {
+        padding: 10px 10px 10px 220px;
+    }
+  }

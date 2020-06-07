@@ -1,0 +1,80 @@
+@import "../../styles/responsiveness";
+
+.categories-link {  
+  display: contents;
+}
+
+.categories-card {
+  margin: 10px;
+  width: 20%;
+  border-radius: 0.25rem;
+  touch-action: pan-y;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  height: 181px;
+  background-color: rgba(61, 182, 211, 0.8);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer; 
+
+  @include mq(838px) {
+    width: 30%;
+  }
+
+  @include mq(631px) {
+    width: 40%;
+  }
+
+  @include mq(464px) {
+    width: 70%;
+  }
+
+  @include mq(320px) {
+    width: 90%;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  } 
+
+  .categories-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0.25rem;
+  }
+
+  .categories-label {
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 12px;
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+               0px 4px 7px rgba(0,0,0,0.1),
+               0px 9px 12px rgba(0,0,0,0.1);
+    display: flex;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    width: fit-content;
+    height: inherit;
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../styles/responsiveness";
+
+.service-wrapper {
+  position: relative;
+  padding: 75px 0;
+  z-index: 999;
+
+  @include mq(568px) {
+    padding: 40px 0;
+  }
+
+  .bg-overlay {
+    display: block;
+    background: #dff6fe;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 30%;
+    left: 0;
+  }
+
+  .service-container {
+    display: block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+    .service-header {
+      font-size: 30px;
+      font-weight: 700;
+      color: #1b409a;
+
+      @include mq(568px) {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+
+    .service-subtext {
+      font-size: 16px;
+      margin: 0;
+      color: #414146;
+
+      @include mq(568px) {
+        font-size: 14px;
+        color: #747373;
+      }
+    }
+  }
+}
+
+.carousel-container {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  margin-top: 70px;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(568px) {
+    margin-top: 20px;
+  }
+
+  .carousel-outer {
+    margin: -50px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+
+    .carousel-inner {
+      transition: all 0.25s ease 0s;
+      touch-action: manipulation;
+
+      .carousel-item {
+        button {
+          min-width: 30px;
+          min-height: 30px;
+          background: rgba(61, 182, 211, 0.5);
+        }
+
+        button:hover {
+          background: rgb(61, 182, 211);
+        }
+
+        button::before {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+.doctor-card {
+  min-width: 760px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 42.7%, 0.14);
+  padding: 16px;
+  margin-bottom: 10px;
+
+  .doctor-cardcontent {
+    margin: 0;
+    padding: 0;
+
+    .doctor-cardbody {
+      margin-bottom: 8px;
+      letter-spacing: -0.31em;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      text-rendering: optimizespeed;
+
+      .doctor-cardbody1 {
+        width: 75%;
+        display: inline-block;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+
+        .doctor-cardbody1media {
+          display: table;
+          overflow: hidden;
+          zoom: 1;
+
+          .doctor-cardbodyimg {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin-right: 16px;
+
+            img {
+              width: 100px;
+              max-width: 100px;
+              height: 100px;
+              border-radius: 3px;
+            }
+          }
+
+          .doctor-cardbodyinfo {
+            display: table-cell;
+            vertical-align: top;
+            width: 10000px;
+            overflow: hidden;
+            zoom: 1;
+            padding-right: 16px;
+
+            .doctor-carddocname {
+              font-size: 18px;
+              cursor: pointer;
+              font-weight: 700;
+              margin: 0;
+              color: #14bef0;
+            }
+
+            .doctor-carddetails {
+              margin-top: 8px;
+
+              .doctor-cardprofession {
+                max-width: 490px;
+
+                .doctor-cardprofessionttext {
+                  width: 100%;
+                  font-size: 14px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  margin: 0;
+                  font-weight: 400;
+                }
+              }
+
+              .doctor-cardexperience {
+                margin: 0;
+                font-weight: 400;
+                font-size: 14px;
+              }
+
+              .doctor-cardspecialization {
+                width: 100%;
+                font-size: 14px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 490px;
+
+                .doctor-cardtag {
+                  background-color: #f0f0f5;
+                  padding: 3px 8px;
+                  border-radius: 5px;
+                  margin-right: 8px;
+                  white-space: nowrap;
+                }
+
+                span {
+                  .doctor-cardpostion {
+                    display: inline;
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .doctor-cardbody1sub {
+          margin-top: 16px;
+
+          div {
+            .doctor-cardsubcontent {
+              overflow: hidden;
+              zoom: 1;
+              display: table;
+
+              .doctor-cardsubspace {
+                display: table-cell;
+                vertical-align: top;
+                zoom: 1;
+
+                &::after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+
+                &::before {
+                  content: "";
+                  display: table;
+                }
+
+                .doctor-cardspacefill {
+                  width: 100px;
+                  margin-right: 16px;
+                  display: inline-block;
+                }
+              }
+
+              .doctor-cardsubclinic {
+                max-width: 490px;
+
+                p {
+                  font-weight: 700;
+                  margin: 0;
+                  font-size: 14px;
+                }
+
+                .doctor-cardsubclinicitem {
+                  max-width: 490px;
+                  margin-top: 8px;
+
+                  .doctor-cardsubtreatments {
+                    padding: 0;
+                    width: auto;
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-bottom: 8px;
+                    margin-right: 4px;
+                    font-size: 12px;
+
+                    div {
+                      .doctor-cardsubtreattext {
+                        max-width: 120px;
+                        width: auto;
+                        background: #f0f0f5;
+                        display: inline-block;
+                        padding: 4px 8px;
+                        font-size: 12px;
+                        line-height: 1;
+                        white-space: nowrap;
+                        vertical-align: baseline;
+                        border-radius: 0.25em;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+
+                        h3 {
+                          display: inline;
+                          margin: 0;
+                          font-weight: 400;
+                          font-size: 12px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .doctor-cardbody2 {
+        width: 25%;
+        display: inline-block;
+        zoom: 1;
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+
+        .doctor-cardlocation {
+          max-width: 210px;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-bottom: 8px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .doctor-cardfooter {
+      padding-top: 8px;
+      letter-spacing: -0.31em;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      text-rendering: optimizespeed;
+
+      .doctor-cardfootercontainer {
+        overflow: hidden;
+        zoom: 1;
+        display: table;
+
+        .doctor-cardfooterspace {
+          vertical-align: middle;
+          width: 25%;
+          display: inline-block;
+
+          .doctor-cardfooterspacecontent {
+            display: table-cell;
+            vertical-align: top;
+            width: 10000px;
+            overflow: hidden;
+            zoom: 1;
+          }
+        }
+
+        .doctor-cardfooterbuttons {
+          vertical-align: middle;
+          width: 75%;
+          display: inline-block;
+
+          .doctor-cardfooterb {
+            text-align: right;
+
+            .doctor-viewprofilebutton {
+              margin-right: 8px;
+              width: 212px;
+              height: 40px;
+              padding: 4px 0;
+              border-radius: 3px;
+              outline: none;
+              cursor: pointer;
+              vertical-align: middle;
+              color: #14bef0;
+              background-color: #fff;
+              font-weight: 700;
+              font-size: 14px;
+              border: 1px solid #14bef0;
+              text-align: center;
+
+              &:hover {
+                color: #fff;
+                background-color: #14bef0;
+              }
+            }
+
+            .doctor-bookappointmentbutton {
+              width: 212px;
+              height: 40px;
+              padding: 4px 0;
+              outline: none;
+              cursor: pointer;
+              vertical-align: middle;
+              color: #fff;
+              background-color: #14bef0;
+              border: 1px solid #14bef0;
+              border-radius: 2px;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

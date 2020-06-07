@@ -1,0 +1,30 @@
+.doctorlist-wrapper {
+  position: relative;
+  z-index: 999;
+  background: #f0f0f5;
+
+  .doctorlist-heading {
+    display: flex;
+    max-width: 1200px;
+    padding: 28px 15px;
+    margin:0 auto;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .doctorlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .doctorlist-content {
+      width: 75%;
+    }
+  }
+}

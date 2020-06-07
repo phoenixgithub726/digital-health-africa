@@ -1,0 +1,124 @@
+@import "../../styles/responsiveness";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .menu {
+    position: fixed;
+    right: 25px;
+    top: 50px;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    background: #fff;
+    transition: all 200ms ease-in;
+    transform: scale(0);
+    transform-origin: 100% 50px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      width: max-content;
+
+      li {
+        cursor: pointer;
+        padding: 10px 10px;
+        transition: background 0.25s, color 0.25s;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        &:hover {
+          color: #3db6d3;
+          background: rgba(0, 0, 0, 0.025);
+        }
+      }
+    }
+
+    .topPanelBrands {
+      padding: 0 10px 10px;
+
+      span {
+        @include transition(0.3s ease-out all);
+
+        &:hover {
+          color: #3db6d3;
+        }
+      }
+    }
+
+    &.expanded {
+      width: auto;
+      height: auto;
+      transform: scale(1);
+    }
+  }
+}
+
+@include mq-desktop {
+  .dropdown-menu {
+    position: unset;
+    max-height: 49px;
+    text-align: left;
+    @include transition(0.3s ease-out all);
+    @include transform(translateY(0));
+
+    .menu {
+      height: auto;
+      width: auto;
+      position: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1500px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: unset;
+      transform: scale(1);
+
+      ul {
+        margin-left: -25px;
+        margin-right: -25px;
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          padding: 18px 25px;
+          display: inline-block;
+          margin-bottom: 7px;
+          font-size: 14px;
+          line-height: 18px;
+          color: #787887;
+          letter-spacing: -0.1px;
+        }
+      }
+
+      .topPanelBrands {
+        position: relative;
+        padding: 18px 25px;
+        display: inline-block;
+        margin-bottom: 7px;
+        line-height: 18px;
+        color: #787887;
+
+        span {
+          cursor: pointer;
+          @include transition(0.3s ease-out all);
+        }
+
+        span:hover {
+          color: #3db6d3;
+        }
+      }
+    }
+  }
+}
